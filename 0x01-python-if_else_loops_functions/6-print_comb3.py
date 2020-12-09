@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-for i in range(0, 100):
-    if i != 89:
-        print("{:02d},".format(i), end=' ')
-    else:
-        print("{:02d}".format(i))
+y = 0
+for i in range(0, 10):
+    y = y + 1
+    x = 0
+    for x in range(x + y, 10):
+        print("{:d}".format(i), end='')
+        if i != 8 or x != 9:
+            print("{:d}, ".format(x), end='')
+        else:
+            print("{:d}".format(x))
