@@ -9,7 +9,7 @@ if number < 0:
 else:
     digit = number % 10
 
-print(digit, end=' ')
+print("{:d}".format(digit), end=' ')
 
 if digit > 5:
     print("and is greater than 5")
