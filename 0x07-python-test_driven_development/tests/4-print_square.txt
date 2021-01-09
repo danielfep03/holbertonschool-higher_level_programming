@@ -1,4 +1,4 @@
-Test ``matrix_divided`` function
+Test ``print_square`` function
 ================================
 
 #Import Function
