@@ -1,0 +1,64 @@
+Test ``matrix_divided`` function
+================================
+
+#Import Function
+
+>>> print_square = __import__('4-print_square').print_square
+
+
+# Valid arguments
+
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+>>> print_square(1)
+#
+
+# Random Data type
+
+>>> print_square("D")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square([5])
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(7.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+
+# Negative Arguments
+
+>>> print_square(-5)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+# Floats
+
+>>> print_square(-5.8)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+# Empty Arguments
+
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
