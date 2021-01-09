@@ -1,0 +1,44 @@
+Test ``matrix_divided`` function
+================================
+
+#Import Function
+
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+# Integers and Floats
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+>>> matrix_divided([[1.5, 2.4, 3.1], [4.3, 5.0, 6.8]], 2)
+[[0.75, 1.2, 1.55], [2.15, 2.5, 3.4]]
+
+# Negatives numbers
+
+>>> matrix_divided([[1, -2, 3], [-4, 5, 6]], 2)
+[[0.5, -1.0, 1.5], [-2.0, 2.5, 3.0]]
+
+>>> matrix_divided([[-1, -2.4, -3], [4.3, -5, -6.8]], 2)
+[[-0.5, -1.2, -1.5], [2.15, -2.5, -3.4]]
+
+
+# By Zero
+
+>>> matrix_divided([[1, 2.4, 3], [4.3, 5, 6.8]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+# Empty Matrix
+
+>>> matrix_divided([[]], 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# No arguments
+
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
