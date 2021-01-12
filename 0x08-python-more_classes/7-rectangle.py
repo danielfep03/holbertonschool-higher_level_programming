@@ -6,6 +6,7 @@ class Rectangle:
     '''Rectangle class with public class attribute'''
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.height = height
@@ -16,7 +17,7 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return("")
         else:
-            return ((str(self.number_of_instances) * self.width + "\n") * self.height).strip()
+            return ((str(self.print_symbol) * self.width + "\n") * self.height).strip() 
 
     def __repr__(self):
         return("Rectangle({:d}, {:d})".format(self.width, self.height))
