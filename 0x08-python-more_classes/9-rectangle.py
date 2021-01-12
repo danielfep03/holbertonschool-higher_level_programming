@@ -46,10 +46,6 @@ class Rectangle:
             return rect_2
         return rect_1
 
-    @classmethod
-    def square(cls, size=0):
-        return cls(size, size)
-
     @property
     def width(self):
         return self.__width
@@ -73,3 +69,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
