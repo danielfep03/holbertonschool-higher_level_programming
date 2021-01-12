@@ -15,7 +15,7 @@ class Rectangle:
             return (("#" * self.width + "\n") * self.height).strip()
 
     def __repr__(self):
-        return(f"Rectangle({self.width}, {self.height})")
+        return("Rectangle({:d}, {:d})".format(self.width, self.height))
 
     def area(self):
         if self.height == 0 or self.width == 0:
