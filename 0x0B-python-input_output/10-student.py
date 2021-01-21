@@ -19,4 +19,3 @@ class Student:
             if i in attrs:
                 new_dict[i] = j
         return new_dict
-
