@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     '''Class for drawing a rectangle'''
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -12,6 +13,9 @@ class Rectangle(Base):
         self.y = y
         self.x = x
         super().__init__(id)
+    
+    def area(self):
+        return self.width * self.height
 
     @property
     def width(self):
