@@ -13,14 +13,19 @@ class Rectangle(Base):
         self.y = y
         self.x = x
         super().__init__(id)
-    
+
+    def __str__(self):
+        return str(('[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'
+                    .format(self.id, self.x, self.y, self.width, self.height)))
+
     def area(self):
         return self.width * self.height
 
     def display(self):
-         print(str(('#' * self.width + '\n')*self.height).strip())
+        print("\n" * self.y, end='')
+        print(str((' ' * self.x + '#' * self.width + '\n') *
+                  self.height), end='')
 
-         
     @property
     def width(self):
         return self.__width
