@@ -26,10 +26,14 @@ class Rectangle(Base):
         print(str((' ' * self.x + '#' * self.width + '\n') *
                   self.height), end='')
 
-    def update(self, *args):
-        for item in range(len(args)):
-            my_list_2 = ['id', 'width', 'height', 'x', 'y']
-            setattr(self, my_list_2[item], args[item])
+    def update(self, *args, **kwargs):
+        my_list_2 = ['id', 'width', 'height', 'x', 'y']
+        if args and args[0]:
+            for item in range(len(args)):
+                setattr(self, my_list_2[item], args[item])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     @property
     def width(self):
