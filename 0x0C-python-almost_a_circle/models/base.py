@@ -49,3 +49,27 @@ class Base:
 
         with open("{}.json".format(cls.__name__), 'w') as f:
             f.write(new_list)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''Returns an instance with all attributes already set'''
+        if cls.__name__ is "Rectangle":
+            dummy = cls(1, 1)
+        if cls.__name__ is "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """loads a file"""
+        filename = cls.__name__ + ".json"
+        data = []
+        try:
+            with open(filename) as file:
+                data = cls.from_json_string(file.read())
+            for i, j in enumerate(data):
+                data[i] = cls.create(**data[i])
+        except:
+            pass
+        return data
