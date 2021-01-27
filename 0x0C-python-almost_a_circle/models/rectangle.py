@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''  '''
+''' Module for create a rectangle class '''
 
 
 from models.base import Base
@@ -8,6 +8,7 @@ from models.base import Base
 class Rectangle(Base):
     '''Class for drawing a rectangle'''
     def __init__(self, width, height, x=0, y=0, id=None):
+        ''' Constructor Method '''
         self.width = width
         self.height = height
         self.y = y
@@ -15,18 +16,22 @@ class Rectangle(Base):
         super().__init__(id)
 
     def __str__(self):
+        '''str() method'''
         return str(('[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'
                     .format(self.id, self.x, self.y, self.width, self.height)))
 
     def area(self):
+        '''Return the area of the rectangle'''
         return self.width * self.height
 
     def display(self):
+        '''Display the rectangle'''
         print("\n" * self.y, end='')
         print(str((' ' * self.x + '#' * self.width + '\n') *
                   self.height), end='')
 
     def update(self, *args, **kwargs):
+        '''Updates the rectangle'''
         my_list_2 = ['id', 'width', 'height', 'x', 'y']
         if args and args[0]:
             for item in range(len(args)):
@@ -35,13 +40,16 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    def to_dictionary(self):
+        return {'id': self.id, 'width': self.width, 'height':
+                self.height, 'x': self.x, 'y': self.y}
+
     @property
     def width(self):
         return self.__width
 
     @width.setter
     def width(self, w):
-        print("apas")
         if type(w) is int:
             self.__width = w
         else:
