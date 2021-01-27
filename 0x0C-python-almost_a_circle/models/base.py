@@ -34,7 +34,7 @@ class Base:
         if json_string is None or json_string[0] is None:
             return []
         else:
-            json.loads(json_string)
+            return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
