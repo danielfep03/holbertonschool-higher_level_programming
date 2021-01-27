@@ -41,6 +41,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, w):
+        print("apas")
         if type(w) is int:
             self.__width = w
         else:
