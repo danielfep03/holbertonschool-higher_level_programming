@@ -41,15 +41,18 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        ''' Return a dictionary '''
         return {'id': self.id, 'width': self.width, 'height':
                 self.height, 'x': self.x, 'y': self.y}
 
     @property
     def width(self):
+        '''Return the width of the rectangle'''
         return self.__width
 
     @width.setter
     def width(self, w):
+        '''Set the width of the rectangle'''
         if type(w) is int:
             self.__width = w
         else:
@@ -59,10 +62,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        '''Return the height of the rectangle'''
         return self.__height
 
     @height.setter
     def height(self, h):
+        '''Set the height of the rectangle'''
         if type(h) is int:
             self.__height = h
         else:
@@ -72,10 +77,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        ''' Return the x of the rectangle'''
         return self.__x
 
     @x.setter
     def x(self, x):
+        '''Set the x of the rectangle'''
         if type(x) is int:
             self.__x = x
         else:
@@ -85,10 +92,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        ''' Return the y of the rectangle'''
         return self.__y
 
     @y.setter
     def y(self, y):
+        '''Set the y of the rectangle'''
         if type(y) is int:
             self.__y = y
         else:
