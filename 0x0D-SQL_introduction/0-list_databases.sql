@@ -1,2 +1,2 @@
--- list all databases of a MySQL server
+-- Use show function
 SHOW DATABASES;
