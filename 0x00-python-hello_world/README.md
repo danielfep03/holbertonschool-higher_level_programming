@@ -32,4 +32,5 @@
 
 
 <h2 align="center">Credits</h2>
-Work is owned and maintained by [me](https://twitter.com/DanielFep_am)
+Work is owned and maintained by
+#### [Daniel Amado](https://twitter.com/DanielFep_am)
