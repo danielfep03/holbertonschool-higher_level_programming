@@ -17,7 +17,7 @@
 <h2 align="center">Scripts</h2>
 
 | File  | Objetive  |
-|:-|:-:|
+|:-|:-|
 | 0-run | Runs a Python script.  |
 | 1-run_inline  | Shell script that runs Python code |
 | 2-print.py |  Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line. |
