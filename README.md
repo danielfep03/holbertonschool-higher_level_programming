@@ -15,7 +15,7 @@ This repository contains practical excercises using higher level programming lan
 
 | Project  | Learning Objetive  |
 |:-|:-:|
-| [0x00-hello_world](./0x00-hello_world) | Python Sintax  |
+| [0x00-python-hello_world](./0x00-python-hello_world) | Python Sintax  |
 | [0x01-python-if_else_loops_functions](./0x01-python-if_else_loops_functions)  | How to use functions and loop in python  |
 | [0x02-python-import_modules](./0x02-python-import_modules)  | How to import and create modules in python |
 | [0x03-python-data_structures](./0x03-python-data_structures)  | How to use lists as stacks and queues  |
