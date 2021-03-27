@@ -22,6 +22,6 @@ def mysqlconnect():
     cursor.close()
     db_connection.close()
 
+
 if __name__ == '__main__':
     mysqlconnect()
-
