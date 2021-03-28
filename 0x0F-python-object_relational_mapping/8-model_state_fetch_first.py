@@ -11,7 +11,7 @@ if __name__ == '__main__':
                            argv[2], argv[3]))
     Session = sessionmaker(engine)
     session = Session()
-    states = session.query(State.id).first()
+    states = session.query(State).first()
 
     if states is not None:
         print("{}: {}".format(states.id, states.name))
