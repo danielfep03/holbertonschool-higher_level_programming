@@ -20,6 +20,6 @@ if __name__ == '__main__':
         if states.id:
             print(states.id)
     except AttributeError:
-        print("Not Found")
+        print("Not found")
 
     session.close()
