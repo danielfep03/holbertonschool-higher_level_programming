@@ -16,9 +16,10 @@ if __name__ == '__main__':
     session = Session()
     states = session.query(State).filter(State.name == argv[4])
 
-    if states is not None:
-        print("{}".format(states[0].id))
-    else:
+    try:
+        if states.id:
+            print("{}".format(states[0].id))
+    except AttributeError:
         print("Not Found")
 
     session.close()
