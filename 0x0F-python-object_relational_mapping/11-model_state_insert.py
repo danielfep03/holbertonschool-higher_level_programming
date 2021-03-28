@@ -15,11 +15,11 @@ if __name__ == '__main__':
     Session = sessionmaker(engine)
     session = Session()
     Louisiana = State(name='Louisiana')
+    session.add(Louisiana)
+    session.commit()
 
     state = session.query(State).filter_by(name='Louisiana').first().id
 
-    session.add(Louisiana)
-    session.commit()
     print(state)
 
     session.close()
