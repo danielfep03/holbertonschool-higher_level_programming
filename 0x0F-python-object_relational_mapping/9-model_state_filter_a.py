@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-''' '''
+''' Script that lists States objects that contain the letter a from a database
+'''
 
 from model_state import Base, State
 from sqlalchemy import create_engine
