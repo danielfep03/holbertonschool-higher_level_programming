@@ -14,7 +14,7 @@ if __name__ == '__main__':
                            argv[2], argv[3]))
     Session = sessionmaker(engine)
     session = Session()
-    states = session.query(State).filter(State.name == argv[4])
+    states = session.query(State).filter(State.name == argv[4]).first()
 
     try:
         if states.id:
