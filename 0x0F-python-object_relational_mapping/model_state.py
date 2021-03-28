@@ -15,7 +15,7 @@ class State(Base):
     ''' State class definition for a State object in a database connection '''
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True,
-                unique=True, nullable=False)
+                nullable=False)
     name = Column(String(128), nullable=False)
 
 
