@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     try:
         if states.id:
-            print("{}".format(states.id))
+            print(states.id)
     except AttributeError:
         print("Not Found")
 
