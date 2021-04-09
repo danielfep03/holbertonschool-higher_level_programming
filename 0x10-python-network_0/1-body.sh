@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Display the body of the response
-curl -sL "$1"
+curl "$1"
