@@ -7,11 +7,9 @@ from urllib.error import HTTPError
 
 url = argv[1]
 
-try:
-    with request.urlopen(url) as response:
-        print(response.read().decode('UTF-8'))
-except HTTPError as err:
-    print('Error code: {}'.format(err.code))
-
 if __name__ == '__main__':
-    exit
+    try:
+        with request.urlopen(url) as response:
+            print(response.read().decode('UTF-8'))
+    except HTTPError as err:
+        print('Error code: {}'.format(err.code))
