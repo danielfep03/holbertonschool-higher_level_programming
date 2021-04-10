@@ -5,9 +5,9 @@ from urllib import request
 from sys import argv
 from urllib.error import HTTPError
 
-url = argv[1]
 
 if __name__ == '__main__':
+    url = argv[1]
     try:
         with request.urlopen(url) as response:
             print(response.read().decode('UTF-8'))
