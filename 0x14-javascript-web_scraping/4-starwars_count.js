@@ -10,9 +10,8 @@ request(url, (err, response, body) => {
   if (err) throw err;
   results.forEach(element => {
     element.characters.forEach(elem => {
-      console.log(elem.split('/'));
-
-      if (elem === character) { count++; }
+      const idCharacter = elem.split('/')[5];
+      if (idCharacter === character) { count++; }
     });
   });
   console.log(count);
