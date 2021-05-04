@@ -10,7 +10,7 @@ request(url, (err, response, body) => {
   if (err) throw err;
   const data = JSON.parse(body);
   data.forEach((element) => {
-    if (element.completed === true) {
+    if (element.completed === false) {
       if (element.userId !== lastId) {
         acum = 0;
         lastId = element.userId;
