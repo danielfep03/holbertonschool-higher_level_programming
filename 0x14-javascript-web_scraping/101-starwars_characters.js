@@ -7,7 +7,7 @@ request(url, (err, response, body) => {
   if (err) throw err;
   const characters = JSON.parse(body).characters;
   characters.forEach(element => {
-    request(element, (err, response, body) => {
+    request(element, async (err, response, body) => {
       if (err) throw err;
       const nameCharacter = JSON.parse(body).name;
       console.log(nameCharacter);
